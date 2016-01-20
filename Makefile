@@ -1,5 +1,5 @@
-all: sidid.exe
+all: vgmid.exe
 
-sidid.exe: sidid.c
-	gcc sidid.c -Wall -O3 -o sidid.exe
-	strip sidid.exe
+vgmid.exe: vgmid.c
+	gcc vgmid.c -Wall -O3 -o vgmid.exe
+	strip vgmid.exe
