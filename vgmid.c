@@ -124,7 +124,7 @@ int main(int argc, char **argv)
                "-? or --help   Display usage information\n");
         return 0;
 
-    	case 'm':
+        case 'm':
         multiscan = 1;
         break;
 
@@ -374,13 +374,13 @@ void identifyfile(char *name, char *fullname)
   if (!allfiles)
   {
     if (strlen(name) < 3) return;
-	
-	    /* C64 extensions */
-	if (!checkname(name, "sid") &&
-	    /* SNES/SFC extensions */
-	    !checkname(name, "sfc") &&
-		!checkname(name, "smc") &&
-		!checkname(name, "spc")) return;
+    
+        /* C64 extensions */
+    if (!checkname(name, "sid") &&
+        /* SNES/SFC extensions */
+        !checkname(name, "sfc") &&
+        !checkname(name, "smc") &&
+        !checkname(name, "spc")) return;
   }
 
   FILE *in = fopen(name, "rb");
@@ -524,7 +524,7 @@ void printstats()
         printf("Detected players:\n");
         first = 0;
       }
-    	printf("%-24s %d\n", id->name, id->count);
+        printf("%-24s %d\n", id->name, id->count);
     }
     id = (SIDID *)id->next;
   }
