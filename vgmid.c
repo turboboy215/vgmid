@@ -377,10 +377,32 @@ void identifyfile(char *name, char *fullname)
     
         /* C64 extensions */
     if (!checkname(name, "sid") &&
+	/* NES/FDS extensions */
+	!checkname(name, "nes") &&
+	!checkname(name, "fds") &&
+	!checkname(name, "nsf") &&
         /* SNES/SFC extensions */
         !checkname(name, "sfc") &&
         !checkname(name, "smc") &&
-        !checkname(name, "spc")) return;
+        !checkname(name, "spc")) &&
+	/* GB/GBC extensions */
+        !checkname(name, "gb") &&
+	!checkname(name, "gbc") &&
+	!checkname(name, "gbs") &&
+	!checkname(name, "gbr") &&
+	/* GBA extensions */
+	!checkname(name, "gba") &&
+	/* SMS/GG extensions */
+	!checkname(name, "sms") &&
+	!checkname(name, "gg") &&
+	!checkname(name, "sgc") &&
+	!checkname(name, "kss") &&
+	/* SMD/32X extensions */
+	!checkname(name, "bin") &&
+	!checkname(name, "md") &&
+	!checkname(name, "gen") &&
+	!checkname(name, "smd") &&
+	!checkname(name, "32x") return;
   }
 
   FILE *in = fopen(name, "rb");
