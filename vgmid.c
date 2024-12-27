@@ -384,7 +384,7 @@ void identifyfile(char *name, char *fullname)
         /* SNES/SFC extensions */
         !checkname(name, "sfc") &&
         !checkname(name, "smc") &&
-        !checkname(name, "spc")) &&
+        !checkname(name, "spc") &&
 	/* GB/GBC extensions */
         !checkname(name, "gb") &&
 	!checkname(name, "gbc") &&
@@ -402,7 +402,16 @@ void identifyfile(char *name, char *fullname)
 	!checkname(name, "md") &&
 	!checkname(name, "gen") &&
 	!checkname(name, "smd") &&
-	!checkname(name, "32x") return;
+	!checkname(name, "32x") &&
+	/* PCE extensions */
+	!checkname(name, "pce") &&
+	/* VB extensions */
+	!checkname(name, "vb") &&
+	/* WS/WSC extensions */
+	!checkname(name, "ws") &&
+	!checkname(name, "wsc") &&
+	/* ISO extensions */
+	!checkname(name, "iso")) return;
   }
 
   FILE *in = fopen(name, "rb");
