@@ -375,58 +375,61 @@ void identifyfile(char *name, char *fullname)
   {
     if (strlen(name) < 3) return;
     
-       /* C64 extensions */
-       if (!checkname(name, "sid") &&
-           /* NES/FDS extensions */
-           !checkname(name, "nes") &&
-           !checkname(name, "fds") &&
-           !checkname(name, "nsf") &&
-           /* SNES/SFC extensions */
-           !checkname(name, "sfc") &&
-           !checkname(name, "smc") &&
-           !checkname(name, "spc") &&
-           /* N64 extensions*/
-           !checkname(name, "z64") &&
-           !checkname(name, "n64") &&
-           /* GB/GBC extensions */
-           !checkname(name, "gb") &&
-           !checkname(name, "gbc") &&
-           !checkname(name, "gbs") &&
-           !checkname(name, "gbr") &&
-           /* GBA extensions */
-           !checkname(name, "gba") &&
-           /* NDS extensions */
-           !checkname(name, "nds") &&
-           /* VB extensions */
-           !checkname(name, "vb") &&
-           /* SMS/GG extensions */
-           !checkname(name, "sms") &&
-           !checkname(name, "gg") &&
-           !checkname(name, "sgc") &&
-           !checkname(name, "kss") &&
-           /* SMD/32X extensions */
-           !checkname(name, "bin") &&
-           !checkname(name, "md") &&
-           !checkname(name, "gen") &&
-           !checkname(name, "smd") &&
-           !checkname(name, "32x") &&
-           /* JAG extensions */
-           !checkname(name, "jag") &&
-           !checkname(name, "j64") &&
-           /* LYNX extensions */
-           !checkname(name, "lnx") &&
-           /* PCE extensions */
-           !checkname(name, "pce") &&
-           !checkname(name, "hes") &&
-           /* NGP/NGPC extensions */
-           !checkname(name, "ngp") &&
-           !checkname(name, "ngc") &&
-           /* WS/WSC extensions */
-           !checkname(name, "ws") &&
-           !checkname(name, "wsc") &&
-           !checkname(name, "wsr") &&
-           /* ISO extensions */
-           !checkname(name, "iso")) return;
+        /* C64 extensions */
+    if (!checkname(name, "sid") &&
+	/* NES/FDS extensions */
+	!checkname(name, "nes") &&
+	!checkname(name, "fds") &&
+	!checkname(name, "nsf") &&
+        /* SNES/SFC extensions */
+        !checkname(name, "sfc") &&
+        !checkname(name, "smc") &&
+        !checkname(name, "spc") &&
+	/* GB/GBC extensions */
+        !checkname(name, "gb") &&
+	!checkname(name, "gbc") &&
+	!checkname(name, "gbs") &&
+	!checkname(name, "gbr") &&
+	/* GBA extensions */
+	!checkname(name, "gba") &&
+	/* N64 extensions */
+	!checkname(name, "ndd") &&
+	!checkname(name, "n64") &&
+	!checkname(name, "v64") &&
+	!checkname(name, "z64") &&
+	/* NDS extensions */
+	!checkname(name, "nds") &&
+	/* NGP/NGPC extensions */
+	!checkname(name, "ngp") &&
+	!checkname(name, "ngc") &&
+	/* Lynx extensions */
+	!checkname(name, "lnx") &&
+	!checkname(name, "lyx") &&
+	/* Jaguar extensions */
+	!checkname(name, "jag") &&
+	!checkname(name, "j64") &&
+	/* SMS/GG extensions */
+	!checkname(name, "sms") &&
+	!checkname(name, "gg") &&
+	!checkname(name, "sgc") &&
+	!checkname(name, "kss") &&
+	/* SMD/32X extensions */
+	!checkname(name, "bin") &&
+	!checkname(name, "md") &&
+	!checkname(name, "gen") &&
+	!checkname(name, "smd") &&
+	!checkname(name, "32x") &&
+	/* PCE extensions */
+	!checkname(name, "pce") &&
+	!checkname(name, "hes") &&
+	/* VB extensions */
+	!checkname(name, "vb") &&
+	/* WS/WSC extensions */
+	!checkname(name, "ws") &&
+	!checkname(name, "wsc") &&
+	!checkname(name, "wsr") &&
+	/* ISO extensions */
+	!checkname(name, "iso")) return;
   }
 
   FILE *in = fopen(name, "rb");
